@@ -21,7 +21,7 @@ class CustomDataset(Dataset):
     def __getitem__(self, index):
         """
             Load one item, if large dataset use loading with openning file..
-            How to load one element
+            How to load one element from the dataset 
         """
         sample = self.x[index],self.y[index]
         if self.transform:
@@ -62,8 +62,8 @@ if __name__ == '__main__':
     print(m,n_iterations)
     # Loop for epochs 
     for epoch in range(100):
-        for i, (x,y) in enumerate(dataloader):
-            (x,y)= x.to(device), x.to(device) 
+        for i, (x,y) in enumerate(dataloader): # Loop over batchs 
+            (x,y)= x.to(device), y.to(device) 
             if (i+1) % 5 ==0 :
                 print(f'epoch {epoch+1}, step{i+1}, inputs {x.shape}')
         #Loop over batches : iteration

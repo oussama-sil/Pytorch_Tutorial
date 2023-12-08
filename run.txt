@@ -1,0 +1,13 @@
+conda activate base
+py filename.py
+Work on base env
+
+
+
+# Git 
+
+git add .
+git commit -m "Add"
+git push
+
+git branch

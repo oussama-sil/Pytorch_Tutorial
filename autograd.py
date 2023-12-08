@@ -46,7 +46,7 @@ for epoch in range(2):
     print(f"Weights grad after {epoch} epochs = {weights.grad}")
 #! Emptying the grad 
 for epoch in range(2):
-    weights.grad.zero_()
+    weights.grad.zero_() # set the grads to zero
     model = (weights*3).sum()
     model.backward()
     print(f"Weights grad after {epoch} epochs = {weights.grad}")
